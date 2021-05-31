@@ -2,12 +2,20 @@
 #include <stdlib.h>
 #include <math.h>
 #include  <string.h>
-#include "hw1.h"
+
+#include "utils.h"
+#include "l1.h"
 
 // example function in main .c file
 void base_convert(int num, unsigned int b) {
     // todo, this is just printing
     printf("%i\n", num);
+}
+
+void print_available_programs() {
+   char program_list[3][3-] = {"base_convert num base", 
+                "print_letters a",
+                "print_hex a"};
 }
 
 
@@ -17,7 +25,9 @@ void base_convert(int num, unsigned int b) {
 // You access them by argv[0] is always the program name, argv[1] is the first argument provided, etc. 
 int main(int argv, const char **args){
     if (argv <= 1) {
-        printf("You provided no arguments... Quitting.\n");
+        printf("You did not pick a program from:\n");
+        print_available_programs();
+        printf("Quitting.\n");
         return 0;
     }
 
