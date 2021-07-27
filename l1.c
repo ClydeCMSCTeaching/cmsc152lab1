@@ -1,49 +1,56 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 #include "l1.h"
 
-#define NPROGS 4
-
-void base_convert(unsigned int num, unsigned int b){
-    //Algorithm to Convert From Decimal To Another Base
-    //
-    //Let n be the decimal number.
-    //Let m be the number, initially empty, that we are converting to. We'll be composing it right to left.
-    //Let b be the base of the number we are converting to.
-    //Repeat until n becomes 0
-    //Divide n by b, letting the result be d and the remainder be r.
-    //Write the remainder, r, as the leftmost digit of b.
-    //Let d be the new value of n.
-
-    // if something {
-    //  think of what the base case means for m
-    // }
-    //
-    // do something else which results eventually in the prior something
-    //
+void print_number(unsigned int a) {
+    return;
 }
 
-double normal_random_number_generator_bm(double mu, double std) {
-    // do not use any random number function from C directly in this code block.
+void print_hex(unsigned int a) {
+    return;
+}
 
+void print_asterisk_word(char word[], unsigned int length) {
+    return;
+}
+
+void print_asterisk_shape(unsigned int h) {
+    return;
+}
+
+void insert_into_array(int array[], unsigned int cur_size,
+                       unsigned int total_size, int value) {
+    return;
+}
+
+void sort(int source_array[], int dest_array[], unsigned int size) {
+    return;
+}
+
+double uniform_random() {
     return 0.0;
 }
 
-double normal_random_number_generator(double mu, double std) {
-    // try to use a standard library function to do this.
-    // if you can't find one, try to compute a random normal distribution transform from a unifrom random sample
+int uniform_random_int_range(int low, int high) {
+    return 0;
+}
+
+double uniform_random_double_range(double low, double high) {
     return 0.0;
 }
 
+double normal_random_number_generator_bm() {
+    return 0.0;
+}
 
+double normal_random_number_generator_mpm() {
+    return 0.0;
+}
 
-void print_available_programs() {
-    char *program_list[NPROGS] = {"base_convert num base",
-                             "print_letters a",
-                             "print_hex a",
-                             "finish this listing..."};
+double normal_random_number_generator_ratiomethod() {
+    return 0.0;
+}
 
-    for (int i = 0; i < NPROGS; i++) {
-        printf("Program %i -- %s\n", i, program_list[i]);
-    }
+double normal_random_number(double mu, double std) {
+    return 0.0;
 }

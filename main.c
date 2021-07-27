@@ -1,42 +1,58 @@
-//
-// Created by Austin Clyde on 5/31/21.
-//
 #include <stdio.h>
 #include <stdlib.h>
-#include  <string.h>
+#include <string.h>
+#include <time.h>
 
 #include "l1.h"
 
-void print_arg_error(char *error_msg){
-    printf("ERROR: %s\n", error_msg);
-    print_available_programs();
-    printf("Quitting.\n");
+
+int main() {
+    int par_sorted_array[] = {3, 7, 9, 0, 0, 0};
+    int s_array[] = {3, 5, 2, 4, 1};
+    int d_array[5];
+    char word_rut[] = {'R', 'U', 'T'};
+
+    srand(time(NULL)); // randomize random seed for random number generators
+
+    // I am only putting one line in for each to make sure it compiles
+    // you need to write your own test code
+
+    //exercise 1: print numbers
+    print_number(21);
+
+    //exercise 2: convert decimal to hexadecimal
+    print_hex(31);
+
+    //exercise 3: print_asterisk_word
+    print_asterisk_word(word_rut, 3);
+
+    //exercise 4: print_asterisk_word
+    print_asterisk_shape(5);
+
+    //exercise 5a: insert_into_array
+    insert_into_array(par_sorted_array, 3, 6, 4);
+
+    //exercise 5b: sort
+    sort(s_array, d_array, 5);
+
+    //exercise 6a: uniform random
+    uniform_random();
+
+    //exercise 6b: uniform random ints in a range
+    uniform_random_int_range(0, 100);
+
+    //exercise 6c: uniform random doubles in a range
+    uniform_random_double_range(0, 50.0);
+
+    //exercise 7a: normal random from box-mueller transform
+    normal_random_number_generator_bm();
+
+    //exercise 7b: normal random from Marsaglia polar method
+    normal_random_number_generator_mpm();
+
+    //exercise 7c: normal random from ratio method
+    normal_random_number_generator_ratiomethod();
+
+    //exercise 7d: normal random in (mu, std) range by method of your choice
+    normal_random_number(10, 5);
 }
-
-// int main(int argv, const char **args) is boilerplate code for the main function of your program.
-// over the quarter we will get to understand all the parts, but for now just commit it to memory.
-// argv is the number of arguments provided, and argv is the argument values.
-// You access them by argv[0] is always the program name, argv[1] is the first argument provided, etc.
-int main(int argv, const char **args) {
-    if (argv <= 1) {
-        print_arg_error("Please pick a program");
-        return 0;
-    }
-
-    const char *program_name = args[1];
-    printf("You chose %s.\n", program_name);
-
-    // You will need one of these for all the programs.
-    if (strcmp(program_name, "base_convert") == 0) {
-        if (argv != 4) {
-            print_arg_error("Wrong arguments.");
-            return 0;
-        }
-        int num = atoi(args[2]); // atoi: https://www.cplusplus.com/reference/cstdlib/atoi/
-        int base = atoi(args[3]);
-        base_convert(num, base);
-    }
-
-    return 1;
-}
-
