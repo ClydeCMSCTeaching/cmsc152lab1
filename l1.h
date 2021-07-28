@@ -9,14 +9,6 @@
 // Comments can be expressed in many different ways (google), but
 // this the most typical type of comments you will see.
 
-#include <stdio.h>
-#include <stdlib.h>
-// These are stanard libs and used often. 
-
-// Inside this big if statement, we write out what we are going to code in the .c file.
-// The .h file might not include all the functions in the .c file, but it should include
-// the main functions your client or audience would be curious to see. 
-
 void print_number(unsigned int a);
 
 /**
